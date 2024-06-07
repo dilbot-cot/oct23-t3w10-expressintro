@@ -5,7 +5,12 @@ meta {
 }
 
 get {
-  url: http://localhost:3000/pokemon/random
+  url: http://localhost:3000/pokemon/random?weather=rainy&dinner=butterchicken
   body: none
   auth: none
+}
+
+query {
+  weather: rainy
+  dinner: butterchicken
 }
