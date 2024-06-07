@@ -1,6 +1,11 @@
 const express = require('express')
 const router = express.Router()
 
+const {readAuthData, verifyAuthData} = require('../middleware/authentication')
+
+router.use(readAuthData)
+router.use(verifyAuthData)
+
 router.get('/', (request, response) => {
     response.json({message: "Router route activated!"})
 })
